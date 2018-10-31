@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Aref+Ruqaa|Changa|El+Messiri|Harmattan|Rakkas|Tajawal');
+
+body {
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+.header-jumbotron {
+    height: 70vh;
+    background-image: url("../images/wajat.png");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 !important;
+    box-shadow: inset 0px -5px 16px 0px #5f5f5f85
+}
+
+.header-jumbotron > .overlay {
+    text-align: center;
+    background: #ffffffb0;
+    padding: 2em 3em;
+    color: #272727;
+    box-shadow: 0px 0px 10px 1px #5f5f5fa3;
+}
+
+.header-jumbotron h1 {
+    font-family: 'Aref Ruqaa', serif;
+}
+
+.header-jumbotron p {
+    font-family: 'Harmattan', sans-serif;
+    font-size: 2rem;
+}
+
+.header-jumbotron .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-jumbotron .card-text {
+    flex: 1;
+}
+
+.header-jumbotron .card-link {
+    flex: 0;
+}
+
+.articles .card {
+    height: 100%;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.video-text-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

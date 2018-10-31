@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row articles row-eq-height">
+        {% for page in self.get_newest_articles %}
+
+        <div class="col-12 col-md-4" style="margin-top: 10px">
+            <div class="card" style="width:100%; ">
+                <div class="card-body">
+                    <h5 class="card-title">{{ page }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ page.date }}</h6>
+                    <p class="card-text">{{ page.intro }}</p>
+                    <a href="{{page.url}}" class="btn btn-secondary btn-sm card-link">قراءة المقال &raquo;</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+</div> <!-- /container -->

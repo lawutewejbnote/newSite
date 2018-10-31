@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-blogpage{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% include 'includes/small_nav.html' %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{ page.title }}</h1>
+            <p class="lead">{{ page.intro }}</p>
+            <hr class="my-4">
+            <p class="intro">{{ page.date }}</p>
+        </div>
+    </div>
+
+    {{ page.body|richtext }}
+
+    <p><a href="{{ page.get_parent.url }}">الصفحة الرئيسية</a></p>
+</div>
+
+{% endblock %}

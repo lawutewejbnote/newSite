@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<main role="main">
+
+    {% include 'includes/header.html' %}
+    <div class="container text-center">
+        <h2>{{ page.body|richtext }}</h2>
+
+        <h1>آخر المقالات</h1>
+    </div>
+
+    {% include 'includes/all_articles.html' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 video-text-div text-center">
+                <h1>الشهيد المثقف باسل الأعرج</h1>
+            </div>
+            <div class="col-12 col-md-6">
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/XiJO0QBJtNU?rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+</main>
+
+
+{% endblock %}
