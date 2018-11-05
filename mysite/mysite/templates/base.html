@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+
 <!doctype html>
 
 <html lang="ar"  dir="rtl">
@@ -35,12 +36,18 @@
         {% block content %}{% endblock %}
 
         {# Global javascript #}
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
         <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
+
     </body>
+
 </html>

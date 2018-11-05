@@ -4,6 +4,56 @@ body {
     font-family: 'Tajawal', sans-serif !important;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.blur {
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+
+.main-header {
+    height: 100vh;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.intro {
+    float: left;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.logo {
+    display: none;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease-in-out;
+
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+
+}
+
 .header-jumbotron {
     height: 70vh;
     background-image: url("../images/wajat.png");
@@ -61,4 +111,106 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (min-width: 300px) {
+    .main-header {
+        height: 70vh;
+    }
+
+    .main-header > div {
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .abs-text-container {
+        display: none;
+    }
+
+    .intro {
+        display: none;
+    }
+    .main-header img {
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    .logo img:hover {
+        transform: none;
+    }
+}
+
+@media only screen and (min-width: 350px) {
+    .main-header {
+        min-height: 500px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .main-header {
+        height: 100vh;
+    }
+    .intro {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .abs-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.abs-text-container p {
+    width: 90%;
+    color: rgb(255, 255, 251);
+    display: inline-block;
+    font-size: 22px;
+    margin: auto;
+    text-shadow:
+    0 0 10px rgba(161, 161, 161, 0.67),
+    0 0 20px rgba(150, 150, 150, 0.54);
+}
+
+    .main-header > div {
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .main-header img {
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .5s ease-in-out;
+
+    }
+
+    .intro img:hover {
+
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
 }
